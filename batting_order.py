@@ -10,7 +10,7 @@ Created on Wed Apr 17 09:24:27 2019
 import numpy as np
 import csv
 
-def read_data_file():
+def read_stats():
     csv_file = open("batting_line_up_data.csv")
     total_row = sum(1 for row in csv_file) - 1
     csv_file.seek(0)
@@ -20,10 +20,11 @@ def read_data_file():
     slugging = np.zeros((total_row,))
     strike_out = np.zeros((total_row,))
     stolen_bases = np.zeros((total_row,))
+    batter_names = np.zeros((total_row,))
     i = 0 
     for row in csv_reader:
         if i == 0:
-            None
+            batter_names [i-1] = row[0]
         else:
             batting_average [i-1] = (float(row[1]) - .177)/.169
             on_base [i-1] = (float(row[2]) - .232)/.206
@@ -34,4 +35,5 @@ def read_data_file():
     csv_file.close()
     return batting_average, on_base, slugging, strike_out, stolen_bases
 
-print(read_data_file())
+print(read_stats())
+
