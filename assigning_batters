@@ -94,7 +94,7 @@ sixth_batter = assign_4th_5th_6th_batter(batting_average, slugging, strike_out)
 ninth_batter = assign_2nd_9th_batter(stolen_bases, on_base)
 seventh_batter = assign_7th_8th_batter(on_base)
 eigth_batter = assign_7th_8th_batter(on_base)
-print("1." + first_batter + "\n" + "2." + second_batter + "\n" + "3." + third_batter + "\n" + "4." + fourth_batter + "\n" + "5." + fifth_batter + "\n" + "6." + sixth_batter + "\n" "7." + seventh_batter + "\n" + "8." + eigth_batter + "\n" + "9." + ninth_batter)
+print("Batting Lineup: " + "\n" + "1." + first_batter + "\n" + "2." + second_batter + "\n" + "3." + third_batter + "\n" + "4." + fourth_batter + "\n" + "5." + fifth_batter + "\n" + "6." + sixth_batter + "\n" "7." + seventh_batter + "\n" + "8." + eigth_batter + "\n" + "9." + ninth_batter)
 
 
 
