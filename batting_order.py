@@ -20,12 +20,11 @@ def read_stats():
     slugging = np.zeros((total_row,))
     strike_out = np.zeros((total_row,))
     stolen_bases = np.zeros((total_row,))
-    batter_names = np.zeros((total_row,))
+    batter_names = [None] * total_row # np.empty((total_row,))
     i = 0 
     for row in csv_reader:
-        if i == 0:
+        if i != 0:
             batter_names [i-1] = row[0]
-        else:
             batting_average [i-1] = (float(row[1]) - .177)/.169
             on_base [i-1] = (float(row[2]) - .232)/.206
             slugging [i-1] = (float(row[3]) - .279)/.361
@@ -33,7 +32,8 @@ def read_stats():
             stolen_bases [i-1] = (float(row[5]) - 1)/29
         i += 1
     csv_file.close()
-    return batting_average, on_base, slugging, strike_out, stolen_bases
+    return batting_average, on_base, slugging, strike_out, stolen_bases, batter_names
+
 
 print(read_stats())
 
