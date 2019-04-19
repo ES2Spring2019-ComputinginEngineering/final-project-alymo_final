@@ -20,7 +20,7 @@ def read_stats():
     slugging = np.zeros((total_row,))
     strike_out = np.zeros((total_row,))
     stolen_bases = np.zeros((total_row,))
-    batter_names = [None] * total_row # np.empty((total_row,))
+    batter_names = [None] * total_row 
     i = 0 
     for row in csv_reader:
         if i != 0:
