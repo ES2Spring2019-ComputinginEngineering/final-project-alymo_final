@@ -27,6 +27,7 @@ def read_stats():
         
 
 def get_lineup():
+    
     def assign_3rd_batter(batting_average):
         for i in batting_average:
             index = np.argmax(batting_average)

@@ -14,7 +14,7 @@ def run_quality(batter, on_base, stolen_bases, next_occupied_base, hit_quality, 
     bases_run = min(next_occupied_base - current_base - 1, hit_quality * random.random() * stolen_bases)
     return bases_run
 
-def score_lineup(lineups, ):
+def score_lineup(lineups, ): #pass in the stats
     total_runs = 0
     ninnings = 9
     for i in range(ninnings):
@@ -27,7 +27,7 @@ def score_lineup(lineups, ):
                     strikes += 1
                     break
                 bases[0] = batter
-                next_occupied_base = 4
+                next_occupied_base = 5
                 for i, runner in enumerate(reversed(bases)):
                     current_base = 3 - i
                     run = run_quality(runner, on_base, stolen_bases, next_occupied_base, hit_quality, current_base)
@@ -37,4 +37,5 @@ def score_lineup(lineups, ):
                     else:
                         bases[current_base + run] = bases[current_base]
                         bases[current_base] = None
+                        next_occupied_base = current_base + run
     return total_runs
