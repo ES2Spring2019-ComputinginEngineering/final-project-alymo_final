@@ -24,7 +24,9 @@ def read_stats():
         i += 1
     csv_file.close()
     return batting_average, on_base, slugging, strike_out, stolen_bases, batter_names
-        
+
+def find_batter_index(batter, batter_names):
+    return batter_names.index(batter)
 
 def get_lineup():
     
@@ -100,8 +102,8 @@ def get_lineup():
     
     lineup = [first_batter, second_batter, third_batter, fourth_batter, fifth_batter, sixth_batter, seventh_batter, eighth_batter, ninth_batter]
     
-    def find_batter_index(batter):
-        return batter_names.index(batter)
+    def find_batter_index_local(batter):
+        return find_batter_index(batter, batter_names)
     
-    return list(map(find_batter_index, lineup)), batter_names
+    return list(map(find_batter_index_local, lineup)), batter_names
     
