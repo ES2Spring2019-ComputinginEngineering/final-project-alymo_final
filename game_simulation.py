@@ -1,5 +1,5 @@
 import random
-from assigning_batters import read_stats, get_lineup, find_batter_index
+from assigning_batters import find_batter_index
 
 def hit_quality(batter, batter_names, batting_average):
     hit_quality = 0
