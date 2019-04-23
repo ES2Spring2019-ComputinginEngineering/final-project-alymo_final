@@ -27,4 +27,4 @@ average_score = score.mean()
 print("\n Average Total Run: " + str(average_score))
 
 plt.hist(score, bins = np.linspace(0, 30, 31) + 0.5)
-plt.title("Final Score Distribution")
+plt.title("Final Score Distribution: Maximized Lineup")
