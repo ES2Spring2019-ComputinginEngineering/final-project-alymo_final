@@ -5,7 +5,7 @@ might want to test this on a classmates computer to be sure it works!"""
 # This files should not contain any function defitions
 # IMPORT STATEMENTS
 from assigning_batters import *
-from game_simulation2 import *
+from game_simulation import *
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -17,6 +17,8 @@ lineup_indices, batter_names = get_lineup()
 print('Batting Lineup:')
 for i, batter_index in enumerate(lineup_indices):
     print(str(i+1) + ". " + batter_names[batter_index])
+    
+arbiturary_lineup = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 score = np.zeros(50000)
 for i in range(50000):
