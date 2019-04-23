@@ -10,7 +10,7 @@ Delete the instructions above this line and the line:
 
 # Baseball Statistics
 
-Our program takes in batting statistics (batting average, on base percentage, etc) of a team and uses optimization functions (unique to each batter) to return the best lineup, which will maximize the amount of runs scored. It then tests this hypothesized lineup by simulating a game by running through the batting lineup over nine innings by looking at who is on base and the chance of the batter to get on base to determine the final score of the game.
+Our program takes in batting statistics (batting average, on base percentage, etc) of a team and uses optimization functions (unique to each batter) to return the best lineup, which will maximize the amount of runs scored. It then tests this hypothesized lineup by simulating a game by running through the batting lineup over nine innings by looking at who is on base and the chance of the batter to get on base to determine the final score of the game. The computer generated lineup using our program was run as well as a random lineup to compare the results and determine if the program which generated a lineup using stats was effective.
 
 ## Instructions
 
