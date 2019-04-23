@@ -5,7 +5,7 @@ might want to test this on a classmates computer to be sure it works!"""
 # This files should not contain any function defitions
 # IMPORT STATEMENTS
 from assigning_batters import *
-from game_simulation import *
+from game_simulation2 import *
 import numpy as np
 import matplotlib.pyplot as plt
 
