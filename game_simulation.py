@@ -13,7 +13,7 @@ def hit_quality(batter, batter_names, batting_average):
     return hit_quality
 
 def run_quality(batter, on_base, stolen_bases, next_occupied_base, hit_quality, current_base):
-    bases_run = min(next_occupied_base - current_base - 1, hit_quality * random.random() * stolen_bases)
+    bases_run = min(next_occupied_base - current_base - 1, hit_quality * random.random() * stolen_bases * on_base)
     return bases_run
 
 def score_lineup(lineup, batting_average, on_base, stolen_bases, hit_quality): 
