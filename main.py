@@ -22,7 +22,8 @@ arbiturary_lineup = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 score = np.zeros(50000)
 for i in range(50000):
-    score[i] = final_score(4, on_base, batting_average, lineup_indices)
+    innings = 9
+    score[i] = final_score(innings, on_base, batting_average, lineup_indices)
 average_score = score.mean()
 print("\n Average Total Run: " + str(average_score))
 
