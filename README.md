@@ -17,7 +17,10 @@ Describe how the users(instructors) should run your code to see an ***easy to ru
 
 ## File List
 
-batting_llineup_data.csv: the file containing categorical statistics of each of the nine batters 
+batting_llineup_data.csv: the file containing categorical statistics of each of the nine batters.
+assigning_batters.py: parses the statistics from the csv file and organize them into separate arrays. A maximized, indexed lineup is generated using the given weights.
+game_simulation.py: uses the arrays and lineup generated to simulate a baseball game and keeps track of the scores. 
+main.py: user inputs the lineup data and other paramters to generate a distribution of total runs scored by that particular lineup. 
 
 ## How to format your readme
 
