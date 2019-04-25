@@ -6,15 +6,15 @@ After the maximized lineup is generated, a theoretical score of the team could b
 
 ## Instructions
 
-Open main.py. The lineup can be changed by editing the variable lineup. The arbitrary lineup (which bats the hitters in order of which they were in the data file) can be tested by making lineup = arbitrary_lineup (which is defined earlier). The number of innings can also be changed to see the progression of the game, for example, how many runs a this maximized lineup will have by the fourth inning versus a random lineup. The title can also be changed to reflect the lineup being tested.
+Open main.py. The lineup can be changed by editing the variable "lineup". The arbitrary lineup (which bats the hitters in order of which they were listed in the data file) can be tested by making lineup = arbitrary_lineup (which is defined earlier). The number of innings can also be changed to see the progression of the game, for example, how many runs a this maximized lineup will have by the fourth inning versus a random lineup. The title of the histogram can also be changed to reflect the lineup being tested.
 
-In order to test another teams' statistics, a user will need to go into the assigning_batters.py script and change the name of the file being imported. Additionally, the data was normalized using the Red Sox data. This is done by taking each data point and subtracting the lowest data point in a given category and dividing by the max data point - min data point.
+In order to test another teams' statistics, a user will need to go into the assigning_batters.py script and change the name of the file being imported. Additionally, the data was normalized using the Red Sox data. This is done by taking each data point and subtracting the lowest data point in a given category and dividing by the biggest data point - smallest data point.
 
 ## File List
 
 batting_llineup_data.csv: the file containing categorical statistics of each of the nine batters.
 
-assigning_batters.py: parses the statistics from the csv file and organizes them into separate arrays. A maximized, indexed lineup is generated using various functions to weight the most important categories for each batter.
+assigning_batters.py: parses the statistics from the csv file and organizes them into separate arrays. A maximized, indexed, lineup is generated using various functions to weight the most important categories for each batting position.
 
 game_simulation.py: uses a few of the statistc arrays and the maximized lineup generated to simulate a baseball game and records the scores. 
 
