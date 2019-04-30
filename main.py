@@ -18,11 +18,13 @@ print('Batting Lineup:')
 for i, batter_index in enumerate(lineup_indices):
     print(str(i+1) + ". " + batter_names[batter_index])
     
-arbiturary_lineup = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+arbitrary_lineup = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 score = np.zeros(50000)
 for i in range(50000):
-    score[i] = final_score(9, on_base, batting_average, lineup_indices)
+    innings = 9
+    lineup = lineup_indices
+    score[i] = final_score(innings, on_base, batting_average, lineup)
 average_score = score.mean()
 print("\n Average Total Run: " + str(average_score))
 
