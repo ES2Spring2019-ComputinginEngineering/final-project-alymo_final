@@ -20,16 +20,3 @@ game_simulation.py: uses a few of the statistc arrays and the maximized lineup g
 
 main.py: user inputs the lineup data and other paramters to generate a distribution of total runs scored by that particular lineup. 
 
-## How to format your readme
-
-In your readme, you can:
-```
-Give code examples
-```
-
-You can also include useful links, like this one with information about [formatting markdown](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
-
-You can 
-- Also
-- Make
-- Lists
