@@ -9,13 +9,6 @@ def hit_quality(batter_average):
             break
     return bases_hit
 
-#def stealing(stealing_average): #runner_average considers 
-#    bases_stolen = 0 
-#        for i in range(4):
-#            if stealing_average > random.random():
-#                bases_stolen += 1
-#        return bases_stolen
-
 def single_inning_score(on_base, batting_average, lineup_indices, current_batter_index): 
     runs = 0
     current_bases = [0] * 4
