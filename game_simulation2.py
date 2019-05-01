@@ -1,6 +1,6 @@
 import random
 
-def hit_quality(batter_average): #batter_average considers batting averagge, slugging, on_base, and strike out
+def hit_quality(batter_average):
     bases_hit = 0
     for i in range(4):
         if batter_average > random.random():
@@ -9,12 +9,6 @@ def hit_quality(batter_average): #batter_average considers batting averagge, slu
             break
     return bases_hit
 
-#def stealing(stealing_average): #runner_average considers 
-#    bases_stolen = 0 
-#        for i in range(4):
-#            if stealing_average > random.random():
-#                bases_stolen += 1
-#        return bases_stolen
 
 def single_inning_score(on_base, batting_average, lineup_indices): 
     runs = 0
