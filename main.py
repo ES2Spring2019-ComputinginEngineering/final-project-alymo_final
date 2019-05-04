@@ -13,14 +13,17 @@ import matplotlib.pyplot as plt
 
 batting_average, on_base, slugging, strike_out, stolen_bases, batter_names = read_stats()
 
+#prints out the maximized lineup:
 lineup_indices, batter_names = get_lineup()
 print('Batting Lineup:')
 for i, batter_index in enumerate(lineup):
     print(str(i+1) + ". " + batter_names[batter_index])
-    
+ 
+#creating an arbiturary lineup:
 arbitrary_lineup = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-score = np.zeros(50000)
+#testing the score of the game:
+score = np.zeros(50000) #this number could be changed based on how many trials the user would like to run
 for i in range(50000):
     innings = 9
     lineup = lineup_indices
@@ -28,6 +31,7 @@ for i in range(50000):
 average_score = score.mean()
 print("\n Average Total Run: " + str(average_score))
 
+#creates a histogram of the score distribution 
 plt.hist(score, bins = np.linspace(0, 50, 51) + 0.5)
 plt.title("Final Score Distribution: Arbitrary Lineup")
 plt.xlabel("Runs Scored")
