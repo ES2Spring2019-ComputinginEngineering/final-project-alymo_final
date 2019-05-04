@@ -16,7 +16,7 @@ batting_average, on_base, slugging, strike_out, stolen_bases, batter_names = rea
 #prints out the maximized lineup:
 lineup_indices, batter_names = get_lineup()
 print('Batting Lineup:')
-for i, batter_index in enumerate(lineup):
+for i, batter_index in enumerate(lineup_indices):
     print(str(i+1) + ". " + batter_names[batter_index])
  
 #creating an arbiturary lineup:
@@ -27,7 +27,7 @@ score = np.zeros(50000) #this number could be changed based on how many trials t
 for i in range(50000):
     innings = 9
     lineup = lineup_indices
-    score[i] = final_score(innings, on_base, batting_average, lineup)
+    score[i] = final_score(innings, on_base, batting_average, lineup_indices)
 average_score = score.mean()
 print("\n Average Total Run: " + str(average_score))
 
