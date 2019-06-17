@@ -1,5 +1,6 @@
 import random
 
+#this function determines how many bases a single batter can hit based on their stats
 def hit_quality(batter_average): 
     bases_hit = 0
     for i in range(4):
@@ -9,13 +10,7 @@ def hit_quality(batter_average):
             break
     return bases_hit
 
-#def stealing(stealing_average): #runner_average considers 
-#    bases_stolen = 0 
-#        for i in range(4):
-#            if stealing_average > random.random():
-#                bases_stolen += 1
-#        return bases_stolen
-
+#this function returns score of a single inning and keeps tracks of the place in the lineup so that the batter next in line can start in the following inning. 
 def single_inning_score(on_base, batting_average, lineup_indices, current_batter_index): 
     runs = 0
     current_bases = [0] * 4
@@ -48,7 +43,7 @@ def single_inning_score(on_base, batting_average, lineup_indices, current_batter
         current_batter_index = (current_batter_index + 1) % len(lineup_indices)
     return runs, current_batter_index
     
-    
+#this function iterates the inning 9 times and returns the final score of the game. 
 def final_score(nlineup, on_base, batting_average, lineup_indices):
     curr_index = 0
     total_runs = 0

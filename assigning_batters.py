@@ -1,6 +1,7 @@
 import numpy as np
 import csv
 
+#this function parses and normalize the stats of each player
 def read_stats():
     csv_file = open("batting_line_up_data.csv")
     total_row = sum(1 for row in csv_file) - 1
@@ -25,9 +26,11 @@ def read_stats():
     csv_file.close()
     return batting_average, on_base, slugging, strike_out, stolen_bases, batter_names
 
+#this function finds the index of each batter and create an array so the names could be related to the indices
 def find_batter_index(batter, batter_names):
     return batter_names.index(batter)
 
+#this function selects the batters based on their individual abilities
 def get_lineup():
     
     def assign_3rd_batter(batting_average):
